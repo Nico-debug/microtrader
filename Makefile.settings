@@ -1,4 +1,4 @@
-#### STANDARD SETTINGS ####
+#### STANDARD SETTINGS  ####
 
 # Filenames
 TEST_COMPOSE_FILE := docker/test/docker-compose.yml
