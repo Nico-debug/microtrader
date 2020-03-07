@@ -51,7 +51,7 @@ import io.vertx.core.Handler;
 @SuppressWarnings({"unchecked", "rawtypes"})
 public class PortfolioServiceVertxProxyHandler extends ProxyHandler {
 
-  public static final long DEFAULT_CONNECTION_TIMEOUT = 5 * 60; // 5 minutes 
+  public static final long DEFAULT_CONNECTION_TIMEOUT = 5 * 60; // 5 minutes
 
   private final Vertx vertx;
   private final PortfolioService service;
@@ -87,11 +87,6 @@ public class PortfolioServiceVertxProxyHandler extends ProxyHandler {
     accessed();
   }
 
-  public MessageConsumer<JsonObject> registerHandler(String address) {
-    MessageConsumer<JsonObject> consumer = vertx.eventBus().<JsonObject>consumer(address).handler(this);
-    this.setConsumer(consumer);
-    return consumer;
-  }
 
   private void checkTimedOut(long id) {
     long now = System.nanoTime();
