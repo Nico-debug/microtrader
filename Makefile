@@ -1,4 +1,4 @@
-# Import local environment  overrides
+# Import local environment overrides
 $(shell touch .env)
 include .env
 
@@ -23,7 +23,7 @@ export DB_USER ?= audit
 export DB_PASSWORD ?= password
 export BUILD_ID ?=
 
-# Common  settings
+# Common settings
 include Makefile.settings
 
 .PHONY: version test build release clean tag tag%default login logout publish compose dcompose database save load demo all
